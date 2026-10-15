@@ -1,7 +1,7 @@
 {
   "name": "workbook-assistant",
-  "version": "0.4.0",
-  "description": "Helps a PM understand and maintain the project PM workbook (Google Sheets): fills intake sheets from Upwork jobs and drafts daily/weekly client updates from developer reports.",
+  "version": "0.4.1",
+  "description": "Helps a PM understand and maintain the project PM workbook (Google Sheets): fills intake sheets from Upwork jobs (/intake) and runs a business analysis of the client (/bi-analys).",
   "author": {
     "name": "Dmytro",
     "email": "sahnodimon38@gmail.com"

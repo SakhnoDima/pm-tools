@@ -11,7 +11,7 @@
     {
       "name": "workbook-assistant",
       "source": "./plugins/workbook-assistant",
-      "description": "Helps a PM understand and maintain the project workbook: Upwork intake, client updates"
+      "description": "Helps a PM understand and maintain the project workbook: Upwork intake, client business analysis"
     }
   ]
 }

@@ -62,10 +62,11 @@ pm-assistant/                          # корінь репо (папка у VS
         │   ├── bi-analys/             # /bi-analys <workbook-url> (disable-model-invocation)
         │   │   ├── SKILL.md
         │   │   └── references/studio-profile.md
-        │   └── client-tone/
-        │       ├── SKILL.md
-        │       └── references/examples.md
-        │   └── client-daily-update/   # /client-daily-update <workbook-url> (пізніше)
+        │   ├── client-tone/
+        │   │   ├── SKILL.md
+        │   │   └── references/examples.md
+        │   └── client-daily-update/   # /client-daily-update <workbook-url> (disable-model-invocation, пізніше)
+        │       └── SKILL.md
         └── README.md                  # вимоги: Claude in Chrome, доступ до Sheets
 ```
 
