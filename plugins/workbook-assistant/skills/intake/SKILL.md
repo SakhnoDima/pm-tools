@@ -47,33 +47,43 @@ Write with the **google-sheets** connector from this plugin (`update_values`) in
 Write values as **RAW** (not user-entered), so that text from Upwork can never turn into a formula.
 Dropdown cells take only their exact values.
 
+First read both sheets of the new workbook (`'Overview'!A1:C200`, `'Lead Handoff'!A1:C200`) and find each
+field's row by its label in column A, as described in
+[Finding fields](../pm-workbook/references/sheets.md#finding-fields). The value goes into column B of that row.
+If a label is not found, skip that field and list it in the report as "missing in the workbook".
+
 `Overview`:
 
-| Cell | Value |
+| Label | Value |
 |---|---|
-| A1 | `PM Workbook: <short project name>` |
-| B5 | Short project name |
-| B12 | The Upwork job URL |
-| B17 | `Fixed Price` or `Hourly Rate` |
+| title cell (first cell, `PM Workbook: [Назва проєкту]`) | `PM Workbook: <short project name>` |
+| Проєкт | Short project name |
+| Upwork | The Upwork job URL |
+| Тип контракту | `Fixed Price` or `Hourly Rate` |
 
-Leave `B7` (`Лід`), the PM name, dates and other links as they are. `B6` is a formula, do not touch it.
+Leave `Етап` (`Лід`), `PM`, dates and other links as they are. `Клієнт` is a formula, do not touch it.
 
-`Lead Handoff`, column B:
+`Lead Handoff`:
 
-| Cells | Value |
+| Label | Value |
 |---|---|
-| B6 | Client company / contact, if shown |
-| B7 | Problem, in the client's words |
-| B8 | Expected result |
-| B9 | Budget, as stated |
-| B10 | Deadline, if stated, with its reason |
-| B12 | Industry / compliance, if mentioned |
-| B13 | `Upwork` |
-| B16 | The Upwork job URL |
-| B17–B31 | Job and client data in the row order of the sheet (title, contract type, budget/rate, payment verified, rating, reviews, total spent, hire rate, hires, open jobs, country/timezone, member since, proposals, interviewing, invites sent) |
+| Клієнт (компанія, контакт) | Client company / contact, if shown |
+| Проблема | Problem, in the client's words |
+| Що хоче отримати | Expected result |
+| Бюджет | Budget, as stated |
+| Дедлайн | Deadline, if stated, with its reason |
+| Галузь / compliance | Industry / compliance, if mentioned |
+| Джерело ліда | `Upwork` |
+| Job post URL | The Upwork job URL |
+| Назва job post | Job title |
+| Тип контракту | `Fixed Price` or `Hourly Rate` |
+| Бюджет або rate у job post | Budget or hourly range |
+| Payment verified | `Так` / `Ні` |
+| Рейтинг клієнта, Кількість відгуків, Total spent, Hire rate, Кількість наймів, Відкриті вакансії, Країна / таймзона, Member since | Client stats |
+| Proposals на job post, Interviewing, Invites sent | Activity on this job |
 
-Do not fill `B11` (decision maker), `B14` (sales notes), `B32`–`B33` (our proposal): they come from people,
-not from the job page. Leave not-found fields empty.
+Do not fill `Хто приймає рішення`, `Нотатки сейла`, `Connects витрачено`, `Дата відправки proposal`: they come
+from people, not from the job page. Leave not-found values empty.
 
 ### 5. Report
 
