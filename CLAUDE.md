@@ -59,8 +59,9 @@ pm-assistant/                          # корінь репо (папка у VS
         │   │   └── SKILL.md
         │   ├── intake/                # /intake <upwork-job-url> (disable-model-invocation)
         │   │   └── SKILL.md
-        │   ├── client-research/       # /client-research <workbook-url> (disable-model-invocation)
-        │   │   └── SKILL.md
+        │   ├── bi-analys/             # /bi-analys <workbook-url> (disable-model-invocation)
+        │   │   ├── SKILL.md
+        │   │   └── references/studio-profile.md
         │   └── client-tone/
         │       ├── SKILL.md
         │       └── references/examples.md
@@ -72,7 +73,7 @@ pm-assistant/                          # корінь репо (папка у VS
 
 **`/intake <upwork-job-url>`**: Claude in Chrome відкриває джобу (fallback: вставлений текст) → `upwork-intake` витягує дані → PM підтверджує зведення → Drive MCP копіює шаблон у новий воркбук → Sheets MCP заповнює `Overview` і `Lead Handoff` (значення з Upwork пишемо як RAW, щоб текст клієнта не став формулою) → посилання на воркбук і список незаповненого.
 
-**`/client-research <workbook-url>`**: прочитати `Lead Handoff` і `Overview` (якорі: назва, сайт, контакт, країна, джоба) → Claude in Chrome шукає компанію й контакт (сайт → LinkedIn компанії → контакт → інші джерела), лише читання → PM підтверджує → запис у розділ «Дослідження клієнта» `Lead Handoff` (лише підтверджені збіги, RAW) + статус і дата → довільний документ знахідок у чат, без висновків.
+**`/bi-analys <workbook-url>`**: бізнес-аналіз клієнта. Прочитати `Overview`, `Lead Handoff`, `Project Notes` → спершу наш контекст (Drive: чи знаємо цього клієнта) → Claude in Chrome ідентифікує компанію (футер і юридичні сторінки, сусідні бренди, рідна мова й романізації) і ЛПР (LinkedIn Experience) → аналіз: бізнес-модель, масштаб, ринок, стек і AI-зрілість, регуляторика, платоспроможність, де заробити (`studio-profile.md`) → документ з 10 розділів, кожне твердження з міткою Факт / Оцінка / Гіпотеза, кожне число з посиланням або формулою → самоперевірка «очима сейлз-директора» → Google Doc у папці воркбуку → після ОК PM у «Дослідження клієнта» лише підтверджені факти (RAW), посилання на документ в «Інші посилання». Заблоковані сайти не обходимо, лише читання.
 
 **`/client-daily-update <workbook-url>`**: `pm-workbook` → прочитати рядки `Daily Report` за сьогодні (апдейти девів) → `client-tone` → коротка чернетка апдейту для PM. Надсилає PM сам, у воркбук нічого не записується. Пізніше: посилання на чат з клієнтом, щоб врахувати попереднє листування. Weekly вирішимо окремо.
 
