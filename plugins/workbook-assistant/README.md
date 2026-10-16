@@ -4,13 +4,14 @@
 
 ## Що вміє
 
-| Команда / skill | Що робить |
-|---|---|
-| `/intake <upwork-job-url>` | Читає джобу з Upwork, створює воркбук із шаблону, заповнює `Overview` і `Lead Handoff` |
-| `/bi-analys <workbook-url>` | Бізнес-аналіз клієнта: Google Doc з аналізом і підтверджені факти в `Lead Handoff` |
-| `pm-workbook` | Знає аркуші воркбуку, їхні поля і хто що заповнює («де в воркбуці…», «як заповнити…») |
-| `upwork-intake` | Що брати з Upwork-джоби і як це нормалізувати |
-| `client-tone` | Тон і правила листів клієнту («напиши клієнту…») |
+| Команда / skill             | Що робить                                                                              |
+| --------------------------- | -------------------------------------------------------------------------------------- |
+| `/intake <upwork-job-url>`  | Читає джобу з Upwork, створює воркбук із шаблону, заповнює `Overview` і `Lead Handoff` |
+| `/bi-analys <workbook-url>` | Бізнес-аналіз клієнта: Google Doc з аналізом і підтверджені факти в `Lead Handoff`     |
+| `/info [команда]`           | Довідка: що вміє плагін, з чого почати («що вміє плагін», «як користуватись»)          |
+| `pm-workbook`               | Знає аркуші воркбуку, їхні поля і хто що заповнює («де в воркбуці…», «як заповнити…»)  |
+| `upwork-intake`             | Що брати з Upwork-джоби і як це нормалізувати                                          |
+| `client-tone`               | Тон і правила листів клієнту («напиши клієнту…»)                                       |
 
 Плагін **нічого не надсилає клієнту**: він лише показує PM чернетку.
 
@@ -18,10 +19,10 @@
 
 - **Claude Desktop:** Customize → Plugins → Discover → `+` → `SakhnoDima/pm-tools`, потім Install `workbook-assistant`.
 - **Claude Code:**
-  ```
-  /plugin marketplace add SakhnoDima/pm-tools
-  /plugin install workbook-assistant@pm-tools
-  ```
+    ```
+    /plugin marketplace add SakhnoDima/pm-tools
+    /plugin install workbook-assistant@pm-tools
+    ```
 
 ## Перед першим використанням
 
